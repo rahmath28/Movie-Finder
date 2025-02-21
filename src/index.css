@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styling pages to display moves by main tag */
+main{
+    max-width: 1200px;
+    margin: 0px auto;
+    /* to display image of movie details vertcally */
+    /* vh >> view height of desktop , satrts from 0 to 100, (screen height) */
+    min-height: 90vh;
+}

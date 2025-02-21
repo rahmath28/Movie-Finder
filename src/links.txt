@@ -1,0 +1,46 @@
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZGZmOThlOGQwNjE0NGNhZjQ4YmFjNDEzMDRhZmY2MiIsIm5iZiI6MTcyNzM1MzI4Mi45MDIwMDAyLCJzdWIiOiI2NmY1NTFjMjVlMzU0YzUwMTI3M2Y5MTQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.qkkvHMU97xooQwnNO9xtgAex6-TYvaetg5kI7xoK8zs'
+  }
+};
+
+// now playing url , wehave to fetch  like that.
+fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+  .then(res => res.json())
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+
+
+// URLS ALONE 
+
+// FOR NOW PLAYING:
+
+https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1
+
+
+// FOR POPULAR
+
+// https://api.themoviedb.org/3/movie/popular?language=en-US&page=1
+
+
+
+
+// FOR TOP
+
+//https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1
+
+
+// FOR UPCOMING.
+// https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1
+
+
+// FOR MOVIE DETAILS
+// https://api.themoviedb.org/3/movie/movie_id?language=en-US
+
+
+// FOR SEARCH 
+
+//https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1

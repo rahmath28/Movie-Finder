@@ -2,13 +2,10 @@ import { useEffect, useState } from "react"
 import Card from "../components/Card"
 
 
+const MovieTop = () => {
 
-const MovieList = () => {
-
-  //In movie list going to fetch and display movies.
-  // if i update state UI will automaticaally gets updated.
   const [movie,setMovie] = useState([]) // state to store my movies.
-  // initially i have to display movies . >> can do by useEffect hook.
+ 
 
   const options = { // like bearer authentication token, we must have to pass it, then only we get response.
     method: 'GET',
@@ -19,34 +16,21 @@ const MovieList = () => {
     }
   };
 
-  useEffect(() =>{ // whenever page loads , this  function runs.
-
+  useEffect(() =>{ 
    const fetchMovies = async()=>{
-      const response = await fetch("https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1", options); // options is my bearer authetication token, link is fetching url.
+      const response = await fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", options); // options is my bearer authetication token, passed top rated CATEGORY URL.
       const data = await response.json();
-      // console.log(data) // got data of full details of the movie finder , results variable holds the Full array of all movies.
       // console.log(data.results) // got array of movies >>next to  update it in my state.
-      setMovie(data.results)
+      setMovie(data.results) // updated movies in state.
     }
     fetchMovies() // called function here.
-  },[]) // whenever page load , this hook will run.
+  },[]) 
 
-  // next got movies , in my state , so displaying it in movieList , card displays abouts the movies and details , so passing my state as a prop movie varible in card.
-  // then destructure it in card and make changes.
-
-
-  // const dummyArray = new Array(6).fill(null) // initially checked by this dummy array. >> will get 6 object , cause passed 6.
   return (
     // used main tag to style once for all pages.
     <main>
       <section className="max-w-7xl mx-auto py-7">
         <div  className="flex grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {/* initially checked by this dummy array. */}
-      {/* {
-        dummyArray.map((__,index) =>(
-          <Card key={index}/>
-        ))
-      } */}
 
       {
         movie.map((movie) => (
@@ -55,11 +39,8 @@ const MovieList = () => {
       }
         </div>
       </section>
-      
-     
-      
     </main>
   )
 }
 
-export default MovieList
+export default MovieTop

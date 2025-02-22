@@ -10,8 +10,8 @@ const {poster_path, title, overview, id } = movie;
 
   return (
     // poster.path has movie images, displayed movie.
-   <div>
-     <Link to={`/movie/${id}`}>
+  
+     <Link to={`movie/${id}` } movie={movie} >
       <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
       
         <img className="rounded-t-lg" src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={movie.title} />
@@ -26,8 +26,9 @@ const {poster_path, title, overview, id } = movie;
         </div>
       </div>
     </Link>
-   </div>
+
   )
 }
 
 export default Card
+

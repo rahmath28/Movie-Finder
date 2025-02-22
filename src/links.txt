@@ -38,7 +38,7 @@ https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1
 
 
 // FOR MOVIE DETAILS
-// https://api.themoviedb.org/3/movie/movie_id?language=en-US
+// https://api.themoviedb.org/3/movie/{movie_id}?language=en-US
 
 
 // FOR SEARCH 

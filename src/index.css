@@ -9,4 +9,6 @@ main{
     /* to display image of movie details vertcally */
     /* vh >> view height of desktop , satrts from 0 to 100, (screen height) */
     min-height: 90vh;
+    padding: 10px;
+    /* section padding >> like i give padding for each section in older projects */
 }

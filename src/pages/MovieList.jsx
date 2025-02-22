@@ -21,7 +21,7 @@ const MovieList = () => {
 
   useEffect(() =>{
    const fetchMovies = async()=>{
-      const response = await fetch("https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",options); // options is my bearer authetication token.
+      const response = await fetch("https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1", options); // options is my bearer authetication token.
       const data = await response.json();
       // console.log(data) // got data of full details , results variable holds the Full array of all movies.
       // console.log(data.results) // got array of movies >>next to  update it in my state.
@@ -37,9 +37,10 @@ const MovieList = () => {
   // const dummyArray = new Array(6).fill(null) // initially checked by this dummy array. >> will get 6 object , cause passed 6.
   return (
     // used main tag to style once for all pages.
-    <main className="flex flex-wrap sm:cols-2 lg:cols-3 m-auto py-5 gap-5 ">
-      
-       {/* initially checked by this dummy array. */}
+    <main>
+      <section className="max-w-7xl mx-auto py-7">
+        <div  className="flex grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {/* initially checked by this dummy array. */}
       {/* {
         dummyArray.map((__,index) =>(
           <Card key={index}/>
@@ -51,6 +52,10 @@ const MovieList = () => {
           <Card key={index} movie={movie} />
         ))
       }
+        </div>
+      </section>
+      
+     
       
     </main>
   )

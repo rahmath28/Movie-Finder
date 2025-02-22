@@ -5,8 +5,8 @@ const Card = ( {movie} ) => {
 
   return (
     // poster.path has movie images, displayed movie.
-    <div>
-      <div className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    
+      <div className="max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
         <img className="rounded-t-lg" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
         </a>
@@ -24,7 +24,7 @@ const Card = ( {movie} ) => {
         </div>
       </div>
 
-    </div>
+    
   )
 }
 

@@ -7,6 +7,6 @@ import PageNotFound from "./PageNotFound";
 
 // imported and exported all page components as object ({})
 
-export {MovieList, MovieDetails, Search, PageNotFound };
+export { MovieList, MovieDetails, Search, PageNotFound };
 // exported , then set route to each component.
 

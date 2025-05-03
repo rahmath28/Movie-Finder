@@ -27,10 +27,10 @@ const Header = () => {
     // INTHA FUNCTION ENNA RETURN PANNUTHUNA , NAVIGATE PANNUTHU..
     return navigate(`search/?q=${queryTerm}`) // finally worlking successfully..
 
-    // FINAL understood note : search component la useSearchParams hook use panni , q dra argument pass panni , movies ah queryterm dra variable la , get pannen,
+    // FINAL understood note : search component la useSearchParams hook use panni , q dra argument pass panni , movies ah queryterm dra variable la  , url param la  get pannen,
     // then atha fetch pandrathukku use fetch la pass panni , usefetch hook la detsructure panni , based on the queryTerm fetch pannen movies , depenendency la yum antha queryterm kuduthutten , 
     // ippo based on queryterm also the usefetch hook fetches data.
-    // ana enakku use experience ku , search field la search pandrathu than venum so , here created a form , input la attribute create panni atha vachu value get panni , navingate pandre inthe url param ku ..
+    // ana enakku useFetch ku , search field la search pandrathu than venum so , here created a form , input la attribute create panni atha vachu value get panni , navingate pandre inthe url param ku ..
     // en navigation na useSearchParam hook already search pandratha display pannuthu , atha na ennoda search fiells ah vachu panndren avlotha..
   }
   return (
